@@ -15,7 +15,7 @@ const PokemonCard = ({ name, image, abilities, types }: PokemonCardType) => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="pokemoncard mx-auto border border-[#80808059] rounded-[15px] p-[15px] max-w-[110px] min-h-[110px] md:max-w-[300px] md:min-h-[300px] md:max-h-[330px] hover:shadow-lg hover:shadow-yellow-500">
+    <div className="pokemoncard mx-auto border border-[#80808059] rounded-[15px] p-[15px] max-w-[110px] min-h-[110px] max-h-[145px] md:max-w-[300px] md:min-h-[300px] md:max-h-[330px] hover:shadow-lg hover:shadow-yellow-500">
       <button
         className="pokemoncard__activable"
         onClick={openModal}
@@ -38,17 +38,16 @@ const PokemonCard = ({ name, image, abilities, types }: PokemonCardType) => {
         open={isModalOpen}
         onCancel={closeModal}
         footer={null}
-        width={600}
+        width={500}
       >
         <img
-          className="pokemoncard__modal__image max-h-[450px] max-w-[450px] mx-auto"
+          className="pokemoncard__modal__image max-h-[300px] max-w-[300px] mx-auto"
           src={`${image}`}
           alt={`Imagen detallada de ${name}`}
           style={{ width: "100%", height: "auto" }}
         />
   
         <div className="pokemoncard__modal__descriptions max-w-[490px] mx-auto mt-4 flex justify-around">
-          {/* Abilities Section */}
           <section className="pokemoncard__modal__section max-w-[145px] w-full flex flex-col items-start border border-green-500 rounded-t-lg rounded-b-none bg-[#c8e6c86e]">
             <h3 className="pokemoncard__modal__section-title w-full text-center bg-green-500 text-white rounded-t-md">
               Abilities
@@ -62,7 +61,6 @@ const PokemonCard = ({ name, image, abilities, types }: PokemonCardType) => {
             </ul>
           </section>
   
-          {/* Types Section */}
           <section className="pokemoncard__modal__section max-w-[145px] w-full flex flex-col items-start border border-[#2269c5] rounded-t-lg rounded-b-none bg-[#2269c56b]">
             <h3 className="pokemoncard__modal__section-title w-full text-center bg-[#2269c5] text-white rounded-t-md">
               Types
