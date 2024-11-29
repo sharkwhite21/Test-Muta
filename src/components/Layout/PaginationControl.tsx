@@ -28,7 +28,7 @@ export const PaginationControls = ({
         disabled={offset === 0} 
         onClick={handlePrevPage} 
         aria-label="Página anterior"
-        className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 disabled:bg-gray-400 disabled:cursor-not-allowed"
+        className="px-4 py-2 bg-[#7fb0b8] text-white font-semibold rounded-md hover:bg-[#7fb0b8] focus:outline-none focus:ring-2 focus:ring-[#7fb0b8] disabled:bg-gray-400 disabled:cursor-not-allowed"
       >
         <span aria-hidden="true">{'<'}</span>
         <span className="sr-only">Página anterior</span>
@@ -52,7 +52,7 @@ export const PaginationControls = ({
         disabled={offset + limit >= totalPokemons} 
         onClick={handleNextPage} 
         aria-label="Página siguiente"
-        className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 disabled:cursor-not-allowed disabled:bg-gray-400"
+        className="px-4 py-2 bg-[#7fb0b8] text-white font-semibold rounded-md hover:bg-[#7fb0b8] focus:outline-none focus:ring-2 focus:ring-[#7fb0b8] disabled:cursor-not-allowed disabled:bg-gray-400"
       >
         <span aria-hidden="true">{'>'}</span>
         <span className="sr-only">Página siguiente</span>
